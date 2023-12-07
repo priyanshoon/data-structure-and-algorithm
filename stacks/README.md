@@ -7,5 +7,7 @@ Stack is a LIFO (Last IN, First OUT) based concept. We can do only two operation
 
 that's it!
 
+## Study Stack
+
 1. [Stack Using Array](./main_2.c)
 2. [Stack Using Array (struct implementation)](./main_3.c)
