@@ -11,3 +11,7 @@ that's it!
 
 1. [Stack Using Array](./main_2.c)
 2. [Stack Using Array (struct implementation)](./main_3.c)
+
+## Applications of Stacks
+
+1. [Parenthesis Checking](./applications/bracket_balance.c)
