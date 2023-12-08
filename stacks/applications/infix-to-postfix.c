@@ -48,19 +48,6 @@ char stackTop(struct stack *ptr) {
     return ptr->arr[ptr->top];
 }
 
-int match(char a, char b) {
-    if(a == '{' && b == '}') {
-        return 1;
-    }
-    if(a == '(' && b == ')') {
-        return 1;
-    }
-    if(a == '[' && b == ']') {
-        return 1;
-    }
-    return 0;
-}
-
 int precedence(char ch) {
     if(ch == '*' || ch == '/') {
         return 3;
@@ -115,7 +102,7 @@ char *infixToPostfix(char *infix) {
 
 int main() {
     // infix to postfix
-    char *exp = "a-b+t/6";
+    char *exp = "a-b";
     printf("postfix is %s\n", infixToPostfix(exp));
     return 0;
 }
