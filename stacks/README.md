@@ -15,3 +15,4 @@ that's it!
 ## Applications of Stacks
 
 1. [Parenthesis Checking](./applications/bracket_balance.c)
+2. [Multiple Parenthesis Checking](./applications/multiple_bracket_balance.c)
