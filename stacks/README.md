@@ -16,3 +16,4 @@ that's it!
 
 1. [Parenthesis Checking](./applications/bracket_balance.c)
 2. [Multiple Parenthesis Checking](./applications/multiple_bracket_balance.c)
+3. [Infix to Postfix](./applications/infix-to-postfix.c)
