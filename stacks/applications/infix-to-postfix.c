@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -49,17 +50,19 @@ char stackTop(struct stack *ptr) {
 }
 
 int precedence(char ch) {
-    if(ch == '*' || ch == '/') {
+    if(ch == '^') {
         return 3;
-    } else if (ch == '+' || ch == '-') {
+    } else if(ch == '*' || ch == '/') {
         return 2;
+    } else if (ch == '+' || ch == '-') {
+        return 1;
     } else {
-        return 0;
+        return -1;
     }
 }
 
 int isOperator(char ch) {
-    if(ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+    if(ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^') {
         return 1;
     } else {
         return 0;
@@ -76,18 +79,25 @@ char *infixToPostfix(char *infix) {
     int j = 0; // track postfix addition
 
     while(infix[i] != '\0') {
-        if(!isOperator(infix[i])) {
+        if(isalnum(infix[i])) {
             postfix[j] = infix[i];
             j++;
             i++;
-        } else {
-            if(precedence(infix[i]) > precedence(stackTop(sp))) {
-                push(sp, infix[i]);
-                i++;
-            } else {
+        } else if(infix[i] == '(') {
+            push(sp, infix[i]);
+            i++;
+        } else if(infix[i] == ')') {
+            while(stackTop(sp) != '(' && !isEmpty(sp)) {
+                postfix[j++] = pop(sp);
+            }
+            i++;
+        } else if(isOperator(infix[i])) {
+            while(!isEmpty(sp) && precedence(infix[i]) <= precedence(stackTop(sp))) {
                 postfix[j] = pop(sp);
                 j++;
             }
+            push(sp, infix[i]);
+            i++;
         }
     }
 
@@ -95,6 +105,7 @@ char *infixToPostfix(char *infix) {
         postfix[j] = pop(sp);
         j++;
     }
+
     postfix[j] = '\0';
     return postfix;
 }
@@ -102,7 +113,7 @@ char *infixToPostfix(char *infix) {
 
 int main() {
     // infix to postfix
-    char *exp = "a-b";
+    char *exp = "a+b*(c^d-e)^(f+g*h)-i";
     printf("postfix is %s\n", infixToPostfix(exp));
     return 0;
 }
