@@ -6,3 +6,4 @@ Classes.
 ## Data Structure
 1. [Stack](./stacks/)
 2. [Linked List](./linked-list/)
+3. [Queue](./queue/)
