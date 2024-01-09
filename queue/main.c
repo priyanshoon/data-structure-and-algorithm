@@ -1,23 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Queue {
-    int front, rare, size;
-    unsigned capacity;
-    int *array;
+struct queue {
+    int size;
+    int f;
+    int r;
+    int *arr;
 };
 
-struct Queue *createQueue(unsigned capacity) {
-    struct Queue *queue = (struct Queue*)malloc(sizeof(struct Queue));
-    queue->capacity = capacity;
-    queue->front = queue->size = 0;
+int isEmpty(struct queue *q) {
+    if(q->r == q->f) {
+        return 1;
+    }
+    return 0;
+}
 
-    queue->rare = capacity - 1;
-    queue->array = (int*)malloc(queue->capacity * sizeof(int));
-    return queue;
+int isFull(struct queue *q) {
+    if(q->r == q->size-1) {
+        return 1;
+    }
+    return 0;
+}
+
+void enqueue(struct queue *q, int val) {
+    if(isFull(q)) {
+        printf("This queue is full\n");
+    } else {
+        q->r++;
+        q->arr[q->r] = val;
+    }
+}
+
+int dequeue(struct queue *q) {
+    int a = -1;
+    if(isEmpty(q)) {
+        printf("This queue is empty\n");
+    } else {
+        q->f++;
+        a = q->arr[q->f];
+    }
+    return a;
 }
 
 int main() {
-    printf("Hello, World!\n");
+    struct queue q;
+    q.size = 100;
+    q.f = q.r  = -1;
+    q.arr = (int*)malloc(q.size * sizeof(int));
+
+    if(isEmpty(&q))
+        printf("queue is empty\n");
+
+
+    // enqueue
+    enqueue(&q, 12);
+    enqueue(&q, 14);
+    enqueue(&q, 15);
+    enqueue(&q, 82);
+
+    printf("dequeueing element %d\n", dequeue(&q));
+    printf("dequeueing element %d\n", dequeue(&q));
+    printf("dequeueing element %d\n", dequeue(&q));
+
     return 0;
 }

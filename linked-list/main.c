@@ -110,6 +110,21 @@ node *deleteValueInNode(node *head, int value) {
     return head;
 }
 
+node *reverse(node *head) {
+    node *prev = NULL;
+    node *current = head;
+    node *next = NULL;
+
+    while(current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+    return head;
+}
+
 int main() {
     int choice;
     int value;
