@@ -7,3 +7,13 @@ Classes.
 1. [Stack](./stacks/)
 2. [Linked List](./linked-list/)
 3. [Queue](./queue/)
+
+## Algorithms
+1. [Sorting Algorithms](./sorting-algorithms/)
+
+
+### ToDo List
+- [x] Stack
+- [x] Linked List
+- [ ] Queue
+- [ ] Sorting Algorithms
