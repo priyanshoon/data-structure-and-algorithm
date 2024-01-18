@@ -6,8 +6,8 @@ void swap(int *a, int *b) {
     b = temp;
 }
 
-void bubble_sort(int arr[], int n) {
-          
+void bubble_sort(int arr[], int n) { 
+
 }
 
 int main() {
