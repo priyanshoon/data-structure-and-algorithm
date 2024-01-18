@@ -95,10 +95,6 @@ int main() {
     head = insertAtFirst(head, 2);
     head = insertAtFirst(head, 8);
     head = insertAtFirst(head, 5);
-    head = insertAtEnd(head, 45);
-    head = insertAtEnd(head, 60);
-    head = insertAtEnd(head, 90);
-    head = insertAtEnd(head, 70);
     traverse(head);
     head = deleteNodeAtFirst(head);
     traverse(head);
