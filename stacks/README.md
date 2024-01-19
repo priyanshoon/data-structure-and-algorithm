@@ -7,6 +7,8 @@ Stack is a LIFO (Last IN, First OUT) based concept. We can do only two operation
 
 that's it!
 
+![stack img impl](https://cdn.programiz.com/sites/tutorial2program/files/stack.png) 
+
 ## Study Stack
 
 1. [Stack Using Array](./main_2.c)
