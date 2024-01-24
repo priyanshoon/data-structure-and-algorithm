@@ -16,7 +16,7 @@ used to decide the new order of elements in the respective data structure.
 
 ### Task to do - 
 - [x] Bubble Sort Algorithms
-- [ ] Insertion Sort Algorithms
+- [x] Insertion Sort Algorithms
 - [ ] Merge Sort Algorithms
 - [ ] Selection Sort Algorithms
 - [ ] Quick Sort Algorithms
