@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-
+#include <stdlib.h>
 
 void swap(int *a, int *b) {
     int temp = *a;
@@ -30,6 +30,7 @@ void print_arr(int arr[], int n) {
     for(i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
+    printf("\n");
 }
 
 int main() {
@@ -42,11 +43,9 @@ int main() {
 
     printf("arr before \n");
     print_arr(arr, n);
-    printf("\n");
     bubble_sort(arr, n);
     printf("arr after \n");
     print_arr(arr, n); 
-    printf("\n");
 
     return 0;
 }
