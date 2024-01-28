@@ -18,6 +18,6 @@ used to decide the new order of elements in the respective data structure.
 - [x] Bubble Sort Algorithms
 - [x] Insertion Sort Algorithms
 - [ ] Merge Sort Algorithms
-- [ ] Selection Sort Algorithms
+- [x] Selection Sort Algorithms
 - [ ] Quick Sort Algorithms
 - [ ] Heap Sort Algorithms
