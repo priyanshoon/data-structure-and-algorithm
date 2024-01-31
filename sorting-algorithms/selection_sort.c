@@ -15,10 +15,9 @@ void selection_sort(int arr[], int n) {
             if(arr[j] < arr[sel]) {
                 sel = j;
             }
-
-            if(sel != i) {
-                swap(&arr[sel], &arr[i]);
-            }
+        }
+        if(sel != i) {
+            swap(&arr[sel], &arr[i]);
         }
     }
 }
