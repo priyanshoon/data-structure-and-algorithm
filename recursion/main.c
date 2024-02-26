@@ -17,7 +17,7 @@ void print_linear(int i, int n) {
 }
 
 void print_linear_backtracking(int i, int n) {
-    if(i > 1) {
+    if(i < 1) {
         return ;
     }
     print_linear(i-1, n);
@@ -25,9 +25,7 @@ void print_linear_backtracking(int i, int n) {
 }
 
 int main() {
-    int i = 10;
-    int n = 10;
-    print_linear_backtracking(i, n);
+    print_linear_backtracking(3, 3);
     printf("\n");
     return 0;
 }
