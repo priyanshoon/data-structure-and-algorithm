@@ -121,6 +121,7 @@ node *reverse(node *head) {
         prev = current;
         current = next;
     }
+
     head = prev;
     return head;
 }
