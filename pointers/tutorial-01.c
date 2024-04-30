@@ -14,6 +14,7 @@ int descending(int a, int b) {
 // the compare thing is a functional pointer
 // we can add either ascending or descending in place of this functional
 // pointer given below
+
 void bubbleSort(int arr[], int size, int(*compare)(int, int)) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - i - 1; j++) {
