@@ -35,7 +35,7 @@ int main() {
     treenode *p3= createTreeNode(5);
     treenode *p4= createTreeNode(2);
 
-    // Finally tree looks like this 
+    // Finally tree looks like this
     //      4
     //     / \
     //    1   6
