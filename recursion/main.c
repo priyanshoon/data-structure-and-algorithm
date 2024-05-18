@@ -4,7 +4,7 @@ void print_name(int i) {
     if (i == 10) {
         return;
     }
-    printf("Priyanshu Prasad Gupta\n");
+    printf("Priyanshu Prasad\n");
     print_name(i+1);
 }
 
